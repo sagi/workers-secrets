@@ -1,10 +1,10 @@
 {
-  "name": "@sagi.io/workers-secret",
+  "name": "@sagi.io/workers-secrets",
   "version": "0.0.1",
-  "description": "Cloudflare Workers Secret API",
+  "description": "Cloudflare Workers Secrets API",
   "license": "MIT",
   "author": "Sagi Kedmi <git@sagi.io> (https://sagi.io)",
-  "repository": "https://github.com/sagi/workers-secret",
+  "repository": "https://github.com/sagi/workers-secrets",
   "keywords": [
     "cloudflare",
     "workers",
