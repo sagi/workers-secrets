@@ -1,6 +1,6 @@
 {
   "name": "@sagi.io/workers-secrets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cloudflare Workers Secrets API",
   "license": "MIT",
   "author": "Sagi Kedmi <git@sagi.io> (https://sagi.io)",
@@ -13,6 +13,7 @@
     "secrets"
   ],
   "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
   "type": "module",
   "scripts": {
     "cli": "ts-node src/cli.ts",

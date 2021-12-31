@@ -1,4 +1,3 @@
-// @ts-nocheck
 import WorkersSecretsAPI, * as funcs from "./main";
 
 describe("WorkersSecretsAPI", () => {
