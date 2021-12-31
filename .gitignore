@@ -5,7 +5,10 @@
 /docs/
 .idea/*
 
+
 .DS_Store
 coverage
 *.log
 *.swp
+*.env
+.env

@@ -1,0 +1,6 @@
+*
+!/dist/main.js
+!/dist/main.d.ts
+!package.json
+!README.md
+!LICENSE

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkersSecretsAPI WorkersSecretsAPI; end-to-end test 1`] = `
+Array [
+  "https://api.cloudflare.com/client/v4/accounts/CF_ACCOUNT_ID/workers/scripts/anonymitybot-com/secrets",
+  Object {
+    "body": "{\\"name\\":\\"ROTATIONAL_PEPPER\\",\\"text\\":\\"secret value woohoo\\"}",
+    "headers": Object {
+      "Authorization": "Bearer CF_AUTH_TOKEN",
+      "Content-Type": "application/json",
+    },
+    "method": "PUT",
+  },
+]
+`;
+
+exports[`WorkersSecretsAPI createSecret 1`] = `
+Array [
+  "https://api.cloudflare.com/client/v4/accounts/CF_ACCOUNT_ID/workers/scripts/anonymitybot-com/secrets",
+  Object {
+    "body": "{\\"name\\":\\"ROTATIONAL_PEPPER\\",\\"text\\":\\"witch collapse practice feed shame open despair _SAMPLE_PRIVATE_KEY_DO_NOT_IMPORT_creek road again ice least\\"}",
+    "headers": Object {
+      "Authorization": "Bearer CF_AUTH_TOKEN",
+      "Content-Type": "application/json",
+    },
+    "method": "PUT",
+  },
+]
+`;
+
+exports[`WorkersSecretsAPI deleteSecret 1`] = `
+Array [
+  "https://api.cloudflare.com/client/v4/accounts/CF_ACCOUNT_ID/workers/scripts/anonymitybot-com/secrets/ROTATIONAL_PEPPER",
+  Object {
+    "headers": Object {
+      "Authorization": "Bearer CF_AUTH_TOKEN",
+      "Content-Type": "application/json",
+    },
+    "method": "DELETE",
+  },
+]
+`;
+
+exports[`WorkersSecretsAPI fetchApiCall 1`] = `"@sagi.io/workers-secrets: Error with API call {\\"url\\":\\"https://x.xyz\\",\\"options\\":{\\"method\\":\\"GET\\"}}"`;
+
+exports[`WorkersSecretsAPI getAuthHeaders 1`] = `
+Object {
+  "Content-Type": "application/json",
+  "X-Auth-Email": "CF_EMAIL",
+  "X-Auth-Key": "CF_AUTH_KEY",
+}
+`;
+
+exports[`WorkersSecretsAPI getAuthHeaders 2`] = `
+Object {
+  "Authorization": "Bearer CF_AUTH_TOKEN",
+  "Content-Type": "application/json",
+}
+`;
+
+exports[`WorkersSecretsAPI getAuthHeaders 3`] = `"@sagi.io/workers-secrets: Either cfAuthToken or cfEmail and cfAuthKey must be provided"`;
+
+exports[`WorkersSecretsAPI listSecrets 1`] = `
+Array [
+  "https://api.cloudflare.com/client/v4/accounts/CF_ACCOUNT_ID/workers/scripts/anonymitybot-com/secrets",
+  Object {
+    "headers": Object {
+      "Authorization": "Bearer CF_AUTH_TOKEN",
+      "Content-Type": "application/json",
+    },
+    "method": "GET",
+  },
+]
+`;
+
+exports[`WorkersSecretsAPI setGlobals 1`] = `"@sagi.io/workers-secrets: No fetch nor fetchImpl were found."`;
