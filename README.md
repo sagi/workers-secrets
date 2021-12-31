@@ -11,7 +11,7 @@ allows Cloudflare Workers Secrets API within your worker and in Node.js.
 Based on [Cloudflare's wrangler implementation](https://github.com/cloudflare/wrangler/blob/master/src/commands/secret.rs).
 
 
-## Example
+## Example on Node.js
 
 
 Run `$ yarn build` and add the `CF_ACCOUNT_ID` and `CF_AUTH_TOKEN` environment variables.
@@ -35,3 +35,7 @@ import fetchImpl from "cross-fetch";
   console.log(data);
 })();
 ```
+
+## Example on Cloudflare Workers
+
+Simply remove the `fetchImpl` import and usage.
