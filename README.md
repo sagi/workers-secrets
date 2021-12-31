@@ -1,9 +1,9 @@
 # Cloudflare Workers Secrets API
 
-[`@sagi.io/workers-secrets`](https://www.npmjs.com/package/@sagi.io/workers-secrets)
-allows Cloudflare Workers Secrets API within your worker and in Node.js.
+[`@sagi.io/workers-secrets`](https://www.npmjs.com/package/@sagi.io/workers-secrets) is Cloudflare Workers Secrets API for workers and Node.js.
 
 [![CircleCI](https://circleci.com/gh/sagi/workers-secrets.svg?style=svg&circle-token=e5282bece02d965a8fcde66d517bb599f20aa2e4)](https://circleci.com/gh/sagi/workers-secrets)
+[![Coverage Status](https://coveralls.io/repos/github/sagi/workers-secrets/badge.svg)](https://coveralls.io/github/sagi/workers-secrets)
 [![MIT License](https://img.shields.io/npm/l/@sagi.io/workers-secrets.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![version](https://img.shields.io/npm/v/@sagi.io/workers-secrets.svg?style=flat-square)](http://npm.im/@sagi.io/workers-secrets)
 
