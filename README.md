@@ -10,6 +10,83 @@ allows Cloudflare Workers Secrets API within your worker and in Node.js.
 
 Based on [Cloudflare's wrangler implementation](https://github.com/cloudflare/wrangler/blob/master/src/commands/secret.rs).
 
+## API
+
+### **`WorkersSecretsAPI({ ... })`**
+
+Instantiates a `WorkersSecretsAPI` object with the methods defined below.
+
+Function definition:
+
+```js
+const WorkersSecretsAPI = function({
+  cfAccountId,
+  cfEmail,
+  cfAuthKey,
+  cfAuthToken,
+  fetchImpl,
+}){ ... }
+```
+
+Where:
+
+  - **`cfAccountId`** *required* Your Cloudflare account id.
+  - **`cfEmail`** *optional|required* The email you registered with Cloudflare.
+  - **`cfAuthKey`** *optional|required* Your Cloudflare Auth Key.
+  - **`cfAuthToken`** *optional|required* Your Cloudflare Auth Token.
+  - **`fetchImpl`** *optional* when running on `Node.js` you need to provide a `fetch` implementation (e.g. `const fetchImpl = require('cross-fetch')`.
+
+Use `cfAuthToken` with a [Cloudflare auth token](https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys). You can also set `cfEmail` and `cfAuthKey` directly without using an auth token.
+
+### **`WorkersSecretsAPI.createSecret({ ... })`**
+
+Function definition:
+
+```js
+const createSecret= async ({
+  scriptName,
+  secretName,
+  secretValue,
+} = {}) => { ... }
+```
+
+Where:
+
+  - **`scriptName`** *required* The name of the Cloudflare Workers Script (e.g. `anonymitybot-com`, can be found in Cloudflare's Dashboard).
+  - **`secretName`** *required* The secret name e.g. `ROTATIONAL_RANDOM_PEPPER`.
+  - **`secretValue`** *required* The secret value.
+
+### **`WorkersSecretsAPI.deleteSecret({ ... })`**
+
+Function definition:
+
+```js
+const deleteSecret= async ({
+  scriptName,
+  secretName,
+} = {}) => { ... }
+```
+
+Where:
+
+  - **`scriptName`** *required* The name of the Cloudflare Workers Script (e.g. `anonymitybot-com`, can be found in Cloudflare's Dashboard).
+  - **`secretName`** *required* The secret name e.g. `ROTATIONAL_RANDOM_PEPPER`.
+
+
+### **`WorkersSecretsAPI.listSecrets({ ... })`**
+
+Function definition:
+
+```js
+const listSecrets= async ({
+  scriptName,
+} = {}) => { ... }
+```
+
+Where:
+
+  - **`scriptName`** *required* The name of the Cloudflare Workers Script (e.g. `anonymitybot-com`, can be found in Cloudflare's Dashboard).
+
 
 ## Example on Node.js
 
