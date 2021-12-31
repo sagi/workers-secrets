@@ -39,7 +39,7 @@ jobs:
           command: yarn test --coverage
       - run:
           name: coveralls
-          command: yarn coveralls
+          command: yarn coveralls < coverage/lcov.info
       - store_artifacts:
           path: coverage
           prefix: coverage
